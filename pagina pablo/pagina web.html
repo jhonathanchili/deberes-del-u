@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="p1">
+            <input type="text" id="row" value="4" /></td>
+            <button id="create" onclick="create()">generar</button>
+        </p>
+        <script>
+            function create() {
+                var row = parseInt(document.getElementById("row").value);
+
+                var tablestart="<table id=myTable border=1>";
+                var tableend = "</table>";
+                var trstart = "<tr>";
+                var trend = "</tr>";
+                var tdstart = "<td>";
+                var tdend = "</td>";
+                var data="data in cell";
+                var str1=tablestart + trstart + tdstart + data + tdend + trend + tableend;
+                document.write(tablestart);
+                var var1 = 0;
+                var var2 = 1;
+                var var3;
+                
+                for (var r=0;r<=row;r++) {
+                    var3 = var1 + var2;
+                    var1 = var2;
+                    var2 = var3;
+                    document.write(trstart);
+                    
+                    for(var c=0; c<3; c++) {
+                        document.write(tdstart+var3);
+                    }
+                }
+
+                    
+                
+        }
+            
+        </script>
+    </body>
+</html>

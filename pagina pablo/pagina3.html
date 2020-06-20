@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jhonath</title>
+</head>
+<body>
+    <p>jhonathan</p>
+    <div id="contenedor">
+        <ul></ul>
+    </div>
+    <input type="text" id="serio">
+    <button id="button">Agregar tarea</button>
+    <template id="plantillaNuevaTarea">
+        <li></li>
+    </template>
+</body>
+<script>
+    document.getElementById('button').addEventListener('click',function(){
+        var tarea = document.getElementById('tarea');
+        crearNuevaTarea(tarea.value);   
+        tarea.value = '';
+    });
+    
+    var crearNuevaTarea = function(nuevaTarea){
+        var contenedor = document.getElementById('contenedor');
+        var plantilla = document.getElementById('plantillaNuevaTarea');
+        var tarea = plantilla.content.querySelector('li');
+
+        var nuevoNodo = document.importNode(tarea,true);
+        nuevoNodo.textContent = nuevaTarea;
+        contenedor.appendChild(nuevoNodo);
+
+    };
+    var fibo= function(){
+        filas[0,1];
+
+    }
+
+    var serie=filas(6);
+    var contador=[0,1];
+    for(filas=0;f<=totalfilas(elementos);filas){
+        for(columas=0; c<=2; c++){
+            c.tog(serie[contador]){
+                contador++;
+            }
+        }
+        var totalFilas=function(contador){
+            returmfilas;
+        }
+    };
+
+function serie()
+   var a,b,result;
+   a=0;
+   b=1;
+   result=b;
+   for(var i=0; i<20; i++){
+       document.write(result+"<br/>");
+       result =a+b;
+       a=b;
+       b=result;
+   };
+   
+
+
+   
+   </script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V- FOR</title>
+</head>
+<body>
+        <div class="alert alert-secondary" role="alert" id="app2">
+                <ul>
+                    <li v-for="nombre in nombres" v-text="nombre"></li>
+                </ul>
+            </div>
+    
+</body>
+<script src="vue.js"></script>
+<script>
+     var app2 = new Vue({
+                        el: '#app2',
+                
+                        data: {
+                            nombres: ['CAMILA','ANDREA','NATHALY']
+                        }
+                
+                    })
+</script>
+</html>

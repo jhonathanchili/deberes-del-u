@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crear elementos en DOM</title>
+</head>
+<body>
+    <p>Este ejemplo muestra como crear elementos en el DOM usando JS</p>
+    <div id="contenedor"></div>
+    <template id="nuevoParrafo">
+        <p></p>
+    </template>
+</body>
+    
+<script>
+    var contenedor = document.getElementById("contenedor");
+    var plantilla = document.getElementById("nuevoParrafo");
+    var parrafo = plantilla.content.querySelector('p');
+    //Crear un nuevo nodo, basado en la plantilla:
+    var nuevoNodo = document.importNode(parrafo, true);
+    nuevoNodo.textContent = "nuevo párrafo 01";
+    contenedor.appendChild(nuevoNodo);
+
+</script>
+</html>

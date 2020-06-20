@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tablas</title>
+</head>
+<body>
+    <p>FIBONACCI</p>
+    <div id="content">
+        <ul></ul>
+    </div>
+    <input type="text" id="quantity">
+    <button id="button">Generar</button>
+    <template id="tablas">
+        <table id="tableCop"border="2">
+        	<tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </template>
+</body>
+<script>
+    
+        document.getElementById('button').addEventListener('click',function(){
+        var quantity = document.getElementById('quantity');
+        crearNewTemp(quantity.value);
+        quantity.value = '';
+        
+        });    
+    
+
+    var crearNewTemp = function(nuevaTarea){
+        var contenedor = document.getElementById('content');
+        var plantilla = document.getElementById('tablas');
+        var quantity = plantilla.content.querySelector('table');
+        var nuevoNodo = document.importNode(quantity, true);
+        nuevoNodo.textContent = nuevaTarea;
+        content.appendChild(nuevoNodo);
+        
+    }
+    Number(quantity);
+    var i= [0,1,1,2,3,5,8,13,];
+    for(var i=0; i<quantity[i].length-1 ; i++){
+    
+        fiboNumeros.push(resultado);
+        fiboUno=fiboDos;
+        fiboNumeros.push(fiboUno);
+        fiboDos=Resultado;
+        fiboNumeros.push(fiboDos);
+    }
+    
+
+</script>
+
+</html>
